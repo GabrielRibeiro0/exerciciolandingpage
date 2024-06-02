@@ -1,0 +1,58 @@
+@use "variables";
+
+.event {
+    padding: 80px 0;
+
+    &--frontend {
+        background-image: linear-gradient(#504f4f, #fff);
+    }
+
+    &--backend {
+        background-image: linear-gradient(#fff, #504f4f);
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    &__details {
+        
+        &__title {
+            margin-bottom: 16px;
+            font-size: 30px;
+            font-weight: 900;
+            font-family: 'BespokeSansVariable', 'Lato', sans-serif, 'Noto Color Emoji';
+            color: #073747;
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .container {
+            display: block;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__details {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+    }
+}
